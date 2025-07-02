@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -21,24 +21,9 @@ let package = Package(
         .target(
             name: "BerTlv",
             dependencies: [],
-            path: "BerTlv",
-            exclude: [
-                          "BerTlvFramework",
-                          "BerTlvFrameworkTests",
-                          "BerTlvTests",
-                          "iOS",
-                          "Mac",
-                          "Tests",
-                          "tvOS",
-                          "Package.swift",
-                          "GCDWebServer.podspec",
-                          "Run-Tests.sh",
-                          "format-source.sh",
-                          "README.md",
-                          "LICENSE"
-                      ],
+            publicHeadersPath: "include",
             cSettings:[
-                .headerSearchPath("BerTlv"),
+                .headerSearchPath("."),
             ]
         ),
     ]

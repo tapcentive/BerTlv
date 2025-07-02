@@ -1,6 +1,0 @@
-framework module BerTlv {
-  umbrella header "BerTlvUmbrella.h"
-
-  export *
-  module * { export * }
-}
